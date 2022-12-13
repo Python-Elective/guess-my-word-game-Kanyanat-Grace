@@ -1,4 +1,3 @@
-
 # -----------------------------------
 # Helper code
 # You don't need to understand this helper code,
@@ -49,8 +48,21 @@ def is_word_guessed(secret_word, letters_guessed):
     returns: boolean, True if all the letters of secret_word are in letters_guessed;
       False otherwise
     '''
-    # FILL IN YOUR CODE HERE...
-    pass
+
+    '''
+  for every letter in secret_word
+    if letter is NOT in letters_guessed
+      stop looking and return False
+
+  success, all letters guessed correctly
+  return True
+  '''
+
+    for i in secret_word:
+      if i not in letters_guessed:
+        return False
+    return True
+
 
 
 ### Testcases
@@ -67,8 +79,39 @@ def get_guessed_word(secret_word, letters_guessed):
     returns: string, comprised of letters and underscores that represents
       what letters in secret_word have been guessed so far.
     '''
-    # FILL IN YOUR CODE HERE...
-    pass
+    
+    '''
+    output_string = ''
+    for every letter in secret_word
+      if the letter is in letters_guessed
+        concatenate that letter on to output_string
+      otherwise
+        concatenate underscore space on to output_string
+
+      return output_string
+    '''
+
+    '''
+    output_list = []
+    for every letter in secret_word
+      if the letter is in letters_guessed
+        append that letter to output_list
+      otherwise
+        append underscore space
+
+    convery list toa string
+    join all the characters in output_list
+    and return that string
+    '''
+    
+    output_string = ''
+
+    for i in secret_word:
+      if i in letters_guessed:
+        output_string += i
+      else:
+        output_string += '_'
+    return output_string
     
     
     
