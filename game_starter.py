@@ -58,8 +58,8 @@ def is_word_guessed(secret_word, letters_guessed):
   return True
   '''
 
-    for i in secret_word:
-      if i not in letters_guessed:
+    for letters in secret_word:
+      if letters not in letters_guessed:
         return False
     return True
 
@@ -99,18 +99,18 @@ def get_guessed_word(secret_word, letters_guessed):
       otherwise
         append underscore space
 
-    convery list toa string
+    convert list to a string
     join all the characters in output_list
     and return that string
     '''
     
     output_string = ''
 
-    for i in secret_word:
-      if i in letters_guessed:
-        output_string += i
+    for letters in secret_word:
+      if letters in letters_guessed:
+        output_string += letters
       else:
-        output_string += '_'
+        output_string += '_ '
     return output_string
     
     
